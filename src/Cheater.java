@@ -25,6 +25,9 @@ public class Cheater {
 	
 	private int singleCompare(String word1, String word2){
 		
+		word1 = word1.toLowerCase();
+		word2 = word2.toLowerCase();
+		
 		if(word1.length() != word2.length()){
 			return -1;
 		}

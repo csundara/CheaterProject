@@ -10,7 +10,7 @@ public class CheatMain {
 		
 		
 		while(loop == 0){
-			System.out.println("1) to creat a list type: enterList" + System.lineSeparator() + "2) to add to the used list type: enterUsed" + System.lineSeparator() + "3) for possible solutions type: getPossablilities" + System.lineSeparator() + "4) quite");
+			System.out.println("1) to creat a list type: enterList" + System.lineSeparator() + "2) to add to the used list type: enterUsed" + System.lineSeparator() + "3) for possible solutions type: getpossable" + System.lineSeparator() + "4) to create new list type: clear" + System.lineSeparator() + "5) quit");
 			theList = printScan.nextLine();
 			String[] makeSwitch = theList.split(" ");
 
@@ -30,7 +30,10 @@ public class CheatMain {
 					cheat1.add(usedElement[0], Integer.valueOf(usedElement[1]));
 				}
 				break;
-			case "getpossablilities" :
+			case "clear" :
+				cheat1 = new Cheater();
+				break;
+			case "getpossable" :
 				for(String s : cheat1.solution()){
 					System.out.println(s);
 				}
